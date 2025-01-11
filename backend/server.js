@@ -30,6 +30,7 @@ app.get("*", (req, res) => {
 });
 
 server.listen(PORT, () => {
+	console.log(process.env.MONGO_DB_URI)
 	connectToMongoDB();
 	console.log(`Server Running on port ${PORT}`);
 });
